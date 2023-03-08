@@ -66,6 +66,15 @@ table {
     width: 100%;
 }
 
+table caption {
+    color: #356eaf;
+    font-size: 1.3em;
+    font-weight: normal;
+    left: 0.5rem;
+    position: absolute;
+    top: -2.25rem;
+}
+
 /* Ocultando propriedades implementadas para o uso de leitores de tela: 
 Para garantir que essas propriedades sejam sempre aplicadas, 
 independentemente da ordem ou da especificidade, utilizamos '!important'*/
