@@ -54,20 +54,39 @@ h1 .flex span:last-of-type {
     width: 4.5rem;
 }
 
-/* Ocultando propriedades implementadas para o uso de leitores de tela: */
-span[class~="sr-apenas"] {
+.envolve-tabela {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+table {
     border: 0;
-    height: 1px;
-    width: 1px;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    position: relative;
+    width: 100%;
+}
+
+/* Ocultando propriedades implementadas para o uso de leitores de tela: 
+Para garantir que essas propriedades sejam sempre aplicadas, 
+independentemente da ordem ou da especificidade, utilizamos '!important'*/
+span[class~="sr-apenas"] {
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
     /* Define as porções visíveis de um elemento: */
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    -webkit-clip-path: inset(50%);
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    clip-path: inset(50%) !important;
+    -webkit-clip-path: inset(50%) !important;
     /* Evita que o conteúdo exceda os limites: */
-    overflow: hidden;
-    white-space: nowrap;
+    overflow: hidden !important;
+    white-space: nowrap !important;
     /* Retira os elementos ocultos do fluxo do documento: */
-    position: absolute;
-    padding: 0;
-    margin: -1px;
+    position: absolute !important;
+    padding: 0 !important;
+    margin: -1px !important;
+}
+
+/* Seleciona os elementos 'span' que NÃO possuem a classe 'sr.apenas': */
+span {
+    font-weight: normal;
 }
