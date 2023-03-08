@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    color: #0a0a23;
+    font-family: sans-serif;
+}
+
+/* Ocultando propriedades implementadas para o uso de leitores de tela: */
+span[class~="sr-apenas"] {
+    border: 0;
+    height: 1px;
+    width: 1px;
+    /* Define as porções visíveis de um elemento: */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    -webkit-clip-path: inset(50%);
+    /* Evita que o conteúdo exceda os limites: */
+    overflow: hidden;
+    white-space: nowrap;
+    /* Retira os elementos ocultos do fluxo do documento: */
+    position: absolute;
+    padding: 0;
+    margin: -1px;
+}
