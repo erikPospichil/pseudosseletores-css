@@ -7,6 +7,12 @@ body {
     font-family: sans-serif;
 }
 
+section {
+    border: 2px solid #d0d0d5;
+    margin: 0 auto;
+    max-width: 40rem;
+}
+
 h1 {
     margin: 0 auto;
     max-width: 37.25rem;
@@ -27,6 +33,25 @@ h1 .flex span:first-of-type {
 /* Seleciona o último elemento do tipo solicitado: */
 h1 .flex span:last-of-type {
     font-size: 1.2em;
+}
+
+#anos {
+    background-color: #0a0a23;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 -2px;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Seleciona os elementos 'span' que tenham uma 'class' */
+#anos span[class] {
+    font-weight: bold;
+    text-align: right;
+    width: 4.5rem;
 }
 
 /* Ocultando propriedades implementadas para o uso de leitores de tela: */
