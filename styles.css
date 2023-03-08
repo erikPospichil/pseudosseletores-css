@@ -95,7 +95,69 @@ span[class~="sr-apenas"] {
     margin: -1px !important;
 }
 
-/* Seleciona os elementos 'span' que NÃO possuem a classe 'sr.apenas': */
-span {
+tbody th {
+    width: calc(100% - 12rem);
+}
+
+tbody td {
+    max-width: 4rem;
+    min-width: 4rem;
+    width: 100vw;
+}
+
+/* Seleciona os elementos 'tr' com a classe 'total': */
+tr[class="total"] {
+    border-bottom: 4px double #0a0a23;
+    font-weight: bold;
+}
+
+tr[class="total"] th {
+    padding: 0.5rem 0 0.25rem 0.5rem;
+    text-align: left;
+}
+
+tr.total td {
+    text-align: right;
+    padding: 0 0.25rem;
+}
+
+/* Seleciona o elemento de número N: */
+tr.total td:nth-of-type(3) {
+    padding: 0.5rem;
+}
+
+tr.total:hover {
+    background-color: #99c9ff;
+}
+
+td.atual {
+    font-style: italic;
+}
+
+tr.dados {
+    background: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr.dados th {
+    padding-left: 0.5rem;
+    padding-top: 0.3rem;
+    text-align: left;
+}
+
+tr.dados th .descricao {
+    display: block;
+    font-style: italic;
     font-weight: normal;
+    margin-right: -13.5rem;
+    padding: 1rem 0 0.75rem;
+}
+
+tr.dados td {
+    padding: 0.3rem 0.25rem 0;
+    text-align: right;
+    vertical-align: top;
+}
+
+tr.dados td:last-of-type {
+    padding-right: 0.5rem;
 }
